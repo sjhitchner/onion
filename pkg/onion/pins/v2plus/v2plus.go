@@ -1,13 +1,12 @@
 package v2plus
 
 import (
-	"fmt"
 	p "github.com/sjhitchner/onion-tutorial/pkg/onion/pins"
 )
 
 var ExpansionDock = p.ExpansionDock{
 	Ethernet: p.Ethernet{
-		Txp: 0,
+		TxP: 0,
 		TxN: 0,
 		RxP: 0,
 		RxN: 0,
@@ -24,7 +23,7 @@ var ExpansionDock = p.ExpansionDock{
 		SCL: 4,
 		SDA: 5,
 	},
-	I2S: p.IS2{
+	I2S: p.I2S{
 		CLK: 3,
 		WS:  2,
 		SDO: 1,
@@ -41,8 +40,8 @@ var ExpansionDock = p.ExpansionDock{
 		CS1:  0,
 	},
 	RGBLed: p.RGBLed{
-		 Red: 17,
-		 Green: 16,
-		 Blue: 15,
-	}
+		Red:   17,
+		Green: 16,
+		Blue:  15,
+	},
 }

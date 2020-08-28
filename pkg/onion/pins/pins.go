@@ -10,6 +10,7 @@ type ExpansionDock struct {
 	I2S
 	UART
 	SPI
+	RGBLed
 	Reset int
 }
 
@@ -55,6 +56,7 @@ type SPI struct {
 }
 
 type RGBLed struct {
-	 Red int
-	 Green int
-	 Blue int
+	Red   int
+	Green int
+	Blue  int
+}

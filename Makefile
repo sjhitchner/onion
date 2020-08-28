@@ -21,12 +21,13 @@ ONION_ENV=
 GOOS=linux
 GOARCH=mipsle 
 
+LDFLAGS=-ldflags="-s -w"
 BIN_DIR=bin
 
 build: build-led
 
 build-led:
-	GOOS=linux GOARCH=mipsle go build -o $(BIN_DIR)/led led/led.go
+	GOOS=linux GOARCH=mipsle go build $(LDFLAGS) -o $(BIN_DIR)/led led/led.go
 	rsync -P -a $(BIN_DIR)/led root@omega-$(ONION_ID).local:/root
 
 # call onion-build
